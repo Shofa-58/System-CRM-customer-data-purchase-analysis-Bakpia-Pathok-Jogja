@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Analisis Pelanggan – Bakpia Pathok Jogja</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brown:     { DEFAULT: '#5C3317', light: '#7A4828', muted: '#9A6B4B' },
+            cream:     { DEFAULT: '#F4E4C1', light: '#FBF5E9', dark: '#E8D09A' },
+            terra:     { DEFAULT: '#B8481F', light: '#D4652F' },
+            surface:   '#FFFFFF',
+            canvas:    '#F7F0E4',
+          },
+          fontSize: {
+            '2xs': '0.65rem',
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-canvas font-['Inter'] text-gray-800 antialiased">
+
+  <!-- ═══════════════════════════════════════════
+       HEADER – compact single-line
+  ═══════════════════════════════════════════ -->
+  <header class="bg-brown border-b border-brown-light">
+    <div class="dashboard-container h-12 flex items-center justify-between">
+      <div class="flex items-center gap-2.5">
+        <span class="text-lg leading-none">🏪</span>
+        <div class="flex items-baseline gap-2">
+          <span class="text-white text-sm font-bold tracking-wide">Bakpia Pathok Oleh-Oleh Jogja</span>
+          <span class="text-cream-dark text-2xs opacity-60 hidden sm:inline">Dashboard Analisis Pelanggan · 2024</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <!-- Filter Pills inline di header -->
+        <div id="categoryFilters" class="flex items-center gap-1.5" role="group" aria-label="Filter kategori produk"></div>
+        <span class="text-cream text-2xs opacity-50 hidden lg:block" id="lastUpdated"></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════
+       MAIN
+  ═══════════════════════════════════════════ -->
+  <main class="dashboard-container py-5 space-y-4">
+
+    <!-- ── ROW 1: KPI CARDS ── -->
+    <section class="grid grid-cols-2 xl:grid-cols-4 gap-3">
+
+      <article class="kpi-card">
+        <div class="kpi-top">
+          <span class="kpi-label">Total Pelanggan</span>
+          <span class="kpi-icon">👥</span>
+        </div>
+        <p class="kpi-value text-brown" id="kpiTotalCustomers">–</p>
+        <p class="kpi-sub" id="kpiTotalCustomersSub"></p>
+      </article>
+
+      <article class="kpi-card">
+        <div class="kpi-top">
+          <span class="kpi-label">Total Transaksi</span>
+          <span class="kpi-icon">🧾</span>
+        </div>
+        <p class="kpi-value text-terra" id="kpiTotalTransactions">–</p>
+        <p class="kpi-sub" id="kpiTotalTransactionsSub"></p>
+      </article>
+
+      <article class="kpi-card">
+        <div class="kpi-top">
+          <span class="kpi-label">Total Revenue</span>
+          <span class="kpi-icon">💰</span>
+        </div>
+        <p class="kpi-value text-emerald-700" id="kpiTotalRevenue">–</p>
+        <p class="kpi-sub" id="kpiTotalRevenueSub"></p>
+      </article>
+
+      <article class="kpi-card">
+        <div class="kpi-top">
+          <span class="kpi-label">Rata-Rata / Transaksi</span>
+          <span class="kpi-icon">📈</span>
+        </div>
+        <p class="kpi-value text-blue-700" id="kpiAvgTransaction">–</p>
+        <p class="kpi-sub" id="kpiAvgTransactionSub"></p>
+      </article>
+
+    </section>
+
+    <!-- ── ROW 2: 3 kolom — Produk Terlaris | Tipe Pelanggan | Top Customers ── -->
+    <section class="grid grid-cols-1 xl:grid-cols-12 gap-3">
+
+      <!-- Produk Terlaris – horizontal bar (5 col) -->
+      <div class="xl:col-span-5 card">
+        <div class="card-header">
+          <div>
+            <h2 class="card-title">Produk Terlaris</h2>
+            <p class="card-sub">Unit terjual per produk</p>
+          </div>
+        </div>
+        <div class="relative" style="height:288px">
+          <canvas id="chartBestProducts" role="img" aria-label="Grafik produk terlaris"></canvas>
+        </div>
+      </div>
+
+      <!-- Tipe Pelanggan – donut (3 col) -->
+      <div class="xl:col-span-3 card flex flex-col">
+        <div class="card-header">
+          <div>
+            <h2 class="card-title">Tipe Pelanggan</h2>
+            <p class="card-sub">Repeat vs New</p>
+          </div>
+        </div>
+        <div class="flex-1 flex flex-col items-center justify-center gap-3 py-2">
+          <div class="relative" style="width:180px;height:180px">
+            <canvas id="chartCustomerType" role="img" aria-label="Grafik tipe pelanggan"></canvas>
+          </div>
+          <div id="customerTypeLegend" class="flex gap-5 text-xs"></div>
+        </div>
+      </div>
+
+      <!-- Top 10 Pelanggan – tabel (4 col) -->
+      <div class="xl:col-span-4 card flex flex-col">
+        <div class="card-header">
+          <div>
+            <h2 class="card-title">Top 10 Pelanggan</h2>
+            <p class="card-sub">Berdasarkan total belanja</p>
+          </div>
+        </div>
+        <div class="flex-1 overflow-y-auto" style="max-height:308px">
+          <table class="w-full text-xs" aria-label="Tabel top 10 pelanggan">
+            <thead class="sticky top-0 bg-cream">
+              <tr class="text-brown text-2xs font-semibold uppercase tracking-wide">
+                <th class="px-3 py-2 text-left w-7">#</th>
+                <th class="px-3 py-2 text-left">Nama</th>
+                <th class="px-3 py-2 text-right">Tx</th>
+                <th class="px-3 py-2 text-right">Total</th>
+              </tr>
+            </thead>
+            <tbody id="topCustomersTable" class="divide-y divide-cream"></tbody>
+          </table>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ── ROW 3: Tren Bulanan (full width) ── -->
+    <section class="card">
+      <div class="card-header">
+        <div>
+          <h2 class="card-title">Tren Transaksi per Bulan</h2>
+          <p class="card-sub">Revenue (kiri) dan jumlah transaksi (kanan) — 2024</p>
+        </div>
+      </div>
+      <div class="relative" style="height:220px">
+        <canvas id="chartMonthlyTrend" role="img" aria-label="Tren transaksi bulanan"></canvas>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="dashboard-container pb-6 text-center text-2xs text-brown-muted opacity-50">
+    Bakpia Pathok Oleh-Oleh Jogja · Dummy project IBM Data Analyst Class
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+/* ================================================================
+   style.css  —  Dashboard Bakpia Pathok Oleh-Oleh Jogja
+   Tailwind handles utilities; this file covers:
+   · Layout container
+   · Component classes (card, kpi-card, filter-btn, badge, rank)
+   · Scrollbar
+   · Micro-animations
+================================================================ */
+
+/* ── RESET baseline ── */
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ── CONTAINER: fills desktop, controlled on mobile ── */
+.dashboard-container {
+  width: 100%;
+  max-width: 1600px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+@media (min-width: 1024px) {
+  .dashboard-container { padding-inline: 2rem; }
+}
+@media (min-width: 1440px) {
+  .dashboard-container { padding-inline: 2.5rem; }
+}
+
+/* ── CARD ── */
+.card {
+  background: #ffffff;
+  border: 1px solid #EBD9B8;
+  border-radius: 10px;
+  padding: 1rem 1.125rem 1rem;
+  overflow: hidden;
+}
+
+.card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.625rem;
+  border-bottom: 1px solid #F4E4C1;
+}
+
+.card-title {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #5C3317;
+  line-height: 1.3;
+}
+
+.card-sub {
+  font-size: 0.68rem;
+  color: #9A6B4B;
+  margin-top: 1px;
+}
+
+/* ── KPI CARD ── */
+.kpi-card {
+  background: #ffffff;
+  border: 1px solid #EBD9B8;
+  border-radius: 10px;
+  padding: 0.875rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+  animation: fadeUp 0.3s ease both;
+}
+.kpi-card:hover {
+  box-shadow: 0 4px 14px rgba(92,51,23,0.10);
+  transform: translateY(-1px);
+}
+.kpi-card:nth-child(1) { animation-delay: 0.04s; }
+.kpi-card:nth-child(2) { animation-delay: 0.08s; }
+.kpi-card:nth-child(3) { animation-delay: 0.12s; }
+.kpi-card:nth-child(4) { animation-delay: 0.16s; }
+
+.kpi-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.kpi-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #9A6B4B;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.kpi-icon {
+  font-size: 1rem;
+  line-height: 1;
+  opacity: 0.7;
+}
+
+.kpi-value {
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.kpi-sub {
+  font-size: 0.68rem;
+  color: #B0968A;
+  margin-top: 0.25rem;
+}
+
+/* ── FILTER BUTTON (in header) ── */
+.filter-btn {
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  border: 1px solid rgba(255,255,255,0.35);
+  background: transparent;
+  color: rgba(244, 228, 193, 0.8);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+}
+.filter-btn:hover {
+  background: rgba(255,255,255,0.15);
+  color: #ffffff;
+}
+.filter-btn.active {
+  background: #F4E4C1;
+  color: #5C3317;
+  border-color: #F4E4C1;
+  font-weight: 700;
+}
+.filter-btn:focus-visible {
+  outline: 2px solid #F4E4C1;
+  outline-offset: 2px;
+}
+
+/* ── BADGE ── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.badge-repeat {
+  background: #FEF3C7;
+  color: #92400E;
+}
+.badge-new {
+  background: #D1FAE5;
+  color: #065F46;
+}
+
+/* ── RANK MEDAL ── */
+.rank-medal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 0.65rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.rank-1 { background: #F59E0B; color: #1a0a00; }
+.rank-2 { background: #9CA3AF; color: #1f2937; }
+.rank-3 { background: #B45309; color: #fff; }
+.rank-other { background: #F4E4C1; color: #7A4828; }
+
+/* ── TABLE ROW HOVER ── */
+#topCustomersTable tr {
+  transition: background 0.12s;
+}
+#topCustomersTable tr:hover {
+  background: #FBF5E9;
+}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: #F4E4C1; }
+::-webkit-scrollbar-thumb { background: #B8906A; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #7A4828; }
+
+/* ── ANIMATION ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.card {
+  animation: fadeUp 0.35s ease both;
+  animation-delay: 0.2s;
+}
+
+/* ── MOBILE: collapse table columns ── */
+@media (max-width: 480px) {
+  .kpi-value { font-size: 1.25rem; }
+}

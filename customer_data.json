@@ -1,0 +1,602 @@
+{
+  "store_info": {
+    "name": "Bakpia Pathok Oleh Oleh Jogja",
+    "location": "Yogyakarta, Indonesia",
+    "data_period": "2026-01-01 to 2026-10-31"
+  },
+  "customers": [
+    {
+      "customer_id": "C001",
+      "name": "Hadi Wijaya",
+      "phone": "08135614226",
+      "city": "Kulon Progo",
+      "join_date": "2026-04-25"
+    },
+    {
+      "customer_id": "C002",
+      "name": "Rina Maulana",
+      "phone": "08232458591",
+      "city": "Solo",
+      "join_date": "2026-08-05"
+    },
+    {
+      "customer_id": "C003",
+      "name": "Budi Santoso",
+      "phone": "08214668136",
+      "city": "Kulon Progo",
+      "join_date": "2026-09-16"
+    },
+    {
+      "customer_id": "C004",
+      "name": "Mega Santoso",
+      "phone": "08814335942",
+      "city": "Bandung",
+      "join_date": "2026-08-03"
+    },
+    {
+      "customer_id": "C005",
+      "name": "Tono Lestari",
+      "phone": "08855667265",
+      "city": "Yogyakarta",
+      "join_date": "2026-03-23"
+    },
+    {
+      "customer_id": "C006",
+      "name": "Rama Setiawan",
+      "phone": "08535661907",
+      "city": "Bantul",
+      "join_date": "2026-04-21"
+    },
+    {
+      "customer_id": "C007",
+      "name": "Doni Handayani",
+      "phone": "08232556017",
+      "city": "Surabaya",
+      "join_date": "2026-02-19"
+    },
+    {
+      "customer_id": "C008",
+      "name": "Yusuf Firmansyah",
+      "phone": "08545437923",
+      "city": "Yogyakarta",
+      "join_date": "2026-08-24"
+    },
+    {
+      "customer_id": "C009",
+      "name": "Putri Wijaya",
+      "phone": "08582322047",
+      "city": "Bandung",
+      "join_date": "2026-05-31"
+    },
+    {
+      "customer_id": "C010",
+      "name": "Hadi Permata",
+      "phone": "08564226067",
+      "city": "Sleman",
+      "join_date": "2026-01-24"
+    },
+    {
+      "customer_id": "C011",
+      "name": "Wulan Kusuma",
+      "phone": "08472338687",
+      "city": "Kulon Progo",
+      "join_date": "2026-02-21"
+    },
+    {
+      "customer_id": "C012",
+      "name": "Fitri Saputra",
+      "phone": "08687120868",
+      "city": "Bantul",
+      "join_date": "2026-07-09"
+    },
+    {
+      "customer_id": "C013",
+      "name": "Yusuf Kusuma",
+      "phone": "08955479144",
+      "city": "Sleman",
+      "join_date": "2026-03-29"
+    },
+    {
+      "customer_id": "C014",
+      "name": "Putri Maulana",
+      "phone": "08413741438",
+      "city": "Semarang",
+      "join_date": "2026-07-14"
+    },
+    {
+      "customer_id": "C015",
+      "name": "Wati Anggraini",
+      "phone": "08914684531",
+      "city": "Jakarta",
+      "join_date": "2026-01-29"
+    },
+    {
+      "customer_id": "C016",
+      "name": "Tono Firmansyah",
+      "phone": "08146292423",
+      "city": "Surabaya",
+      "join_date": "2026-05-18"
+    },
+    {
+      "customer_id": "C017",
+      "name": "Dewi Kusuma",
+      "phone": "08826279418",
+      "city": "Kulon Progo",
+      "join_date": "2026-09-13"
+    },
+    {
+      "customer_id": "C018",
+      "name": "Fitri Anggraini",
+      "phone": "08928698256",
+      "city": "Bantul",
+      "join_date": "2026-05-16"
+    },
+    {
+      "customer_id": "C019",
+      "name": "Rina Kusuma",
+      "phone": "08815408072",
+      "city": "Solo",
+      "join_date": "2026-08-08"
+    },
+    {
+      "customer_id": "C020",
+      "name": "Andi Setiawan",
+      "phone": "08564679591",
+      "city": "Bantul",
+      "join_date": "2026-09-18"
+    }
+  ],
+  "transactions": [
+    {
+      "transaction_id": "T0031",
+      "customer_id": "C015",
+      "date": "2026-02-05",
+      "product_name": "Bakpia Pathok 25 Keju",
+      "category": "Bakpia",
+      "quantity": 2,
+      "price_per_unit": 38000,
+      "total": 76000,
+      "payment_method": "QRIS"
+    },
+    {
+      "transaction_id": "T0012",
+      "customer_id": "C005",
+      "date": "2026-04-06",
+      "product_name": "Bakpia Pathok 25 Durian",
+      "category": "Bakpia",
+      "quantity": 5,
+      "price_per_unit": 45000,
+      "total": 225000,
+      "payment_method": "Tunai"
+    },
+    {
+      "transaction_id": "T0025",
+      "customer_id": "C011",
+      "date": "2026-04-10",
+      "product_name": "Bakpia Pathok 25 Keju",
+      "category": "Bakpia",
+      "quantity": 1,
+      "price_per_unit": 38000,
+      "total": 38000,
+      "payment_method": "Kartu Debit"
+    },
+    {
+      "transaction_id": "T0024",
+      "customer_id": "C011",
+      "date": "2026-04-24",
+      "product_name": "Kopi Joss Bubuk",
+      "category": "Oleh-oleh Lainnya",
+      "quantity": 4,
+      "price_per_unit": 28000,
+      "total": 112000,
+      "payment_method": "Kartu Debit"
+    },
+    {
+      "transaction_id": "T0001",
+      "customer_id": "C001",
+      "date": "2026-05-07",
+      "product_name": "Bakpia Pathok 25 Keju",
+      "category": "Bakpia",
+      "quantity": 2,
+      "price_per_unit": 38000,
+      "total": 76000,
+      "payment_method": "QRIS"
+    },
+    {
+      "transaction_id": "T0028",
+      "customer_id": "C013",
+      "date": "2026-05-16",
+      "product_name": "Walang Goreng",
+      "category": "Jajanan Tradisional",
+      "quantity": 4,
+      "price_per_unit": 18000,
+      "total": 72000,
+      "payment_method": "QRIS"
+    },
+    {
+      "transaction_id": "T0020",
+      "customer_id": "C009",
+      "date": "2026-06-15",
+      "product_name": "Bakpia Pathok 25 Durian",
+      "category": "Bakpia",
+      "quantity": 1,
+      "price_per_unit": 45000,
+      "total": 45000,
+      "payment_method": "Tunai"
+    },
+    {
+      "transaction_id": "T0018",
+      "customer_id": "C009",
+      "date": "2026-06-16",
+      "product_name": "Kipo Kotagede",
+      "category": "Jajanan Tradisional",
+      "quantity": 1,
+      "price_per_unit": 20000,
+      "total": 20000,
+      "payment_method": "QRIS"
+    },
+    {
+      "transaction_id": "T0014",
+      "customer_id": "C007",
+      "date": "2026-06-20",
+      "product_name": "Walang Goreng",
+      "category": "Jajanan Tradisional",
+      "quantity": 2,
+      "price_per_unit": 18000,
+      "total": 36000,
+      "payment_method": "Transfer Bank"
+    },
+    {
+      "transaction_id": "T0033",
+      "customer_id": "C016",
+      "date": "2026-06-29",
+      "product_name": "Geplak Bantul",
+      "category": "Jajanan Tradisional",
+      "quantity": 1,
+      "price_per_unit": 25000,
+      "total": 25000,
+      "payment_method": "Kartu Debit"
+    },
+    {
+      "transaction_id": "T0027",
+      "customer_id": "C012",
+      "date": "2026-07-16",
+      "product_name": "Geplak Bantul",
+      "category": "Jajanan Tradisional",
+      "quantity": 3,
+      "price_per_unit": 25000,
+      "total": 75000,
+      "payment_method": "Tunai"
+    },
+    {
+      "transaction_id": "T0010",
+      "customer_id": "C005",
+      "date": "2026-07-26",
+      "product_name": "Bakpia Pathok 25 Original",
+      "category": "Bakpia",
+      "quantity": 1,
+      "price_per_unit": 35000,
+      "total": 35000,
+      "payment_method": "Transfer Bank"
+    },
+    {
+      "transaction_id": "T0035",
+      "customer_id": "C018",
+      "date": "2026-07-30",
+      "product_name": "Bakpia Pathok 25 Durian",
+      "category": "Bakpia",
+      "quantity": 1,
+      "price_per_unit": 45000,
+      "total": 45000,
+      "payment_method": "Tunai"
+    },
+    {
+      "transaction_id": "T0036",
+      "customer_id": "C019",
+      "date": "2026-08-15",
+      "product_name": "Bakpia Pathok 25 Original",
+      "category": "Bakpia",
+      "quantity": 5,
+      "price_per_unit": 35000,
+      "total": 175000,
+      "payment_method": "Kartu Debit"
+    },
+    {
+      "transaction_id": "T0029",
+      "customer_id": "C014",
+      "date": "2026-08-18",
+      "product_name": "Yangko",
+      "category": "Jajanan Tradisional",
+      "quantity": 2,
+      "price_per_unit": 22000,
+      "total": 44000,
+      "payment_method": "Tunai"
+    },
+    {
+      "transaction_id": "T0009",
+      "customer_id": "C004",
+      "date": "2026-08-23",
+      "product_name": "Walang Goreng",
+      "category": "Jajanan Tradisional",
+      "quantity": 5,
+      "price_per_unit": 18000,
+      "total": 90000,
+      "payment_method": "Tunai"
+    },
+    {
+      "transaction_id": "T0013",
+      "customer_id": "C006",
+      "date": "2026-08-23",
+      "product_name": "Bakpia Pathok 25 Keju",
+      "category": "Bakpia",
+      "quantity": 5,
+      "price_per_unit": 38000,
+      "total": 190000,
+      "payment_method": "QRIS"
+    },
+    {
+      "transaction_id": "T0021",
+      "customer_id": "C009",
+      "date": "2026-08-23",
+      "product_name": "Bakpia Pathok 25 Keju",
+      "category": "Bakpia",
+      "quantity": 5,
+      "price_per_unit": 38000,
+      "total": 190000,
+      "payment_method": "QRIS"
+    },
+    {
+      "transaction_id": "T0026",
+      "customer_id": "C012",
+      "date": "2026-08-30",
+      "product_name": "Yangko",
+      "category": "Jajanan Tradisional",
+      "quantity": 1,
+      "price_per_unit": 22000,
+      "total": 22000,
+      "payment_method": "Tunai"
+    },
+    {
+      "transaction_id": "T0030",
+      "customer_id": "C014",
+      "date": "2026-09-08",
+      "product_name": "Kopi Joss Bubuk",
+      "category": "Oleh-oleh Lainnya",
+      "quantity": 5,
+      "price_per_unit": 28000,
+      "total": 140000,
+      "payment_method": "Tunai"
+    },
+    {
+      "transaction_id": "T0032",
+      "customer_id": "C016",
+      "date": "2026-09-18",
+      "product_name": "Bakpia Pathok 25 Durian",
+      "category": "Bakpia",
+      "quantity": 4,
+      "price_per_unit": 45000,
+      "total": 180000,
+      "payment_method": "Tunai"
+    },
+    {
+      "transaction_id": "T0017",
+      "customer_id": "C009",
+      "date": "2026-09-23",
+      "product_name": "Bakpia Pathok 25 Keju",
+      "category": "Bakpia",
+      "quantity": 2,
+      "price_per_unit": 38000,
+      "total": 76000,
+      "payment_method": "QRIS"
+    },
+    {
+      "transaction_id": "T0006",
+      "customer_id": "C003",
+      "date": "2026-09-26",
+      "product_name": "Yangko",
+      "category": "Jajanan Tradisional",
+      "quantity": 1,
+      "price_per_unit": 22000,
+      "total": 22000,
+      "payment_method": "Transfer Bank"
+    },
+    {
+      "transaction_id": "T0022",
+      "customer_id": "C010",
+      "date": "2026-09-29",
+      "product_name": "Bakpia Pathok 25 Durian",
+      "category": "Bakpia",
+      "quantity": 5,
+      "price_per_unit": 45000,
+      "total": 225000,
+      "payment_method": "QRIS"
+    },
+    {
+      "transaction_id": "T0016",
+      "customer_id": "C008",
+      "date": "2026-10-02",
+      "product_name": "Geplak Bantul",
+      "category": "Jajanan Tradisional",
+      "quantity": 3,
+      "price_per_unit": 25000,
+      "total": 75000,
+      "payment_method": "Kartu Debit"
+    },
+    {
+      "transaction_id": "T0023",
+      "customer_id": "C011",
+      "date": "2026-10-04",
+      "product_name": "Peyek Kacang",
+      "category": "Jajanan Tradisional",
+      "quantity": 5,
+      "price_per_unit": 15000,
+      "total": 75000,
+      "payment_method": "Kartu Debit"
+    },
+    {
+      "transaction_id": "T0005",
+      "customer_id": "C003",
+      "date": "2026-10-07",
+      "product_name": "Bakpia Pathok 25 Keju",
+      "category": "Bakpia",
+      "quantity": 3,
+      "price_per_unit": 38000,
+      "total": 114000,
+      "payment_method": "Kartu Debit"
+    },
+    {
+      "transaction_id": "T0037",
+      "customer_id": "C019",
+      "date": "2026-10-11",
+      "product_name": "Walang Goreng",
+      "category": "Jajanan Tradisional",
+      "quantity": 2,
+      "price_per_unit": 18000,
+      "total": 36000,
+      "payment_method": "Tunai"
+    },
+    {
+      "transaction_id": "T0034",
+      "customer_id": "C017",
+      "date": "2026-10-12",
+      "product_name": "Bakpia Pathok 25 Kacang Hijau",
+      "category": "Bakpia",
+      "quantity": 4,
+      "price_per_unit": 35000,
+      "total": 140000,
+      "payment_method": "Kartu Debit"
+    },
+    {
+      "transaction_id": "T0038",
+      "customer_id": "C019",
+      "date": "2026-10-12",
+      "product_name": "Bakpia Pathok 25 Keju",
+      "category": "Bakpia",
+      "quantity": 2,
+      "price_per_unit": 38000,
+      "total": 76000,
+      "payment_method": "Tunai"
+    },
+    {
+      "transaction_id": "T0004",
+      "customer_id": "C002",
+      "date": "2026-10-14",
+      "product_name": "Bakpia Pathok 25 Original",
+      "category": "Bakpia",
+      "quantity": 1,
+      "price_per_unit": 35000,
+      "total": 35000,
+      "payment_method": "Transfer Bank"
+    },
+    {
+      "transaction_id": "T0002",
+      "customer_id": "C001",
+      "date": "2026-10-16",
+      "product_name": "Geplak Bantul",
+      "category": "Jajanan Tradisional",
+      "quantity": 5,
+      "price_per_unit": 25000,
+      "total": 125000,
+      "payment_method": "Tunai"
+    },
+    {
+      "transaction_id": "T0015",
+      "customer_id": "C008",
+      "date": "2026-10-17",
+      "product_name": "Bakpia Pathok 25 Durian",
+      "category": "Bakpia",
+      "quantity": 5,
+      "price_per_unit": 45000,
+      "total": 225000,
+      "payment_method": "QRIS"
+    },
+    {
+      "transaction_id": "T0007",
+      "customer_id": "C003",
+      "date": "2026-10-18",
+      "product_name": "Kopi Joss Bubuk",
+      "category": "Oleh-oleh Lainnya",
+      "quantity": 2,
+      "price_per_unit": 28000,
+      "total": 56000,
+      "payment_method": "Tunai"
+    },
+    {
+      "transaction_id": "T0003",
+      "customer_id": "C002",
+      "date": "2026-10-20",
+      "product_name": "Yangko",
+      "category": "Jajanan Tradisional",
+      "quantity": 5,
+      "price_per_unit": 22000,
+      "total": 110000,
+      "payment_method": "Transfer Bank"
+    },
+    {
+      "transaction_id": "T0011",
+      "customer_id": "C005",
+      "date": "2026-10-21",
+      "product_name": "Kopi Joss Bubuk",
+      "category": "Oleh-oleh Lainnya",
+      "quantity": 3,
+      "price_per_unit": 28000,
+      "total": 84000,
+      "payment_method": "QRIS"
+    },
+    {
+      "transaction_id": "T0040",
+      "customer_id": "C020",
+      "date": "2026-10-24",
+      "product_name": "Bakpia Pathok 25 Durian",
+      "category": "Bakpia",
+      "quantity": 5,
+      "price_per_unit": 45000,
+      "total": 225000,
+      "payment_method": "Tunai"
+    },
+    {
+      "transaction_id": "T0008",
+      "customer_id": "C003",
+      "date": "2026-10-26",
+      "product_name": "Bakpia Pathok 25 Kacang Hijau",
+      "category": "Bakpia",
+      "quantity": 5,
+      "price_per_unit": 35000,
+      "total": 175000,
+      "payment_method": "QRIS"
+    },
+    {
+      "transaction_id": "T0041",
+      "customer_id": "C020",
+      "date": "2026-10-27",
+      "product_name": "Bakpia Pathok 25 Keju",
+      "category": "Bakpia",
+      "quantity": 4,
+      "price_per_unit": 38000,
+      "total": 152000,
+      "payment_method": "Transfer Bank"
+    },
+    {
+      "transaction_id": "T0019",
+      "customer_id": "C009",
+      "date": "2026-10-28",
+      "product_name": "Bakpia Pathok 25 Durian",
+      "category": "Bakpia",
+      "quantity": 1,
+      "price_per_unit": 45000,
+      "total": 45000,
+      "payment_method": "Tunai"
+    },
+    {
+      "transaction_id": "T0039",
+      "customer_id": "C020",
+      "date": "2026-10-31",
+      "product_name": "Bakpia Pathok 25 Durian",
+      "category": "Bakpia",
+      "quantity": 4,
+      "price_per_unit": 45000,
+      "total": 180000,
+      "payment_method": "Tunai"
+    }
+  ]
+}
